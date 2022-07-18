@@ -1,3 +1,5 @@
+1. PREVIOUS FIVE DAYS DATA
+
 SELECT
     Day,
     COUNT(DISTINCT order_id) AS total_orders,
@@ -25,4 +27,6 @@ FROM
 )five_days
 
 GROUP BY Day;
+
+
 
