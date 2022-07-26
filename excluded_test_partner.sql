@@ -70,9 +70,8 @@ order_week::DATE AS order_week,
                  AND orders.status in (4,5)
                  AND pickup_time BETWEEN
                  extract(epoch FROM date_trunc('week',current_date))::INTEGER - 19800 - 7*86400
-                 AND extract(epoch FROM date_trunc('week',current_date))::INTEGER - 19801
-                 AND driver_id is not null
-                 AND driver_id in (SELECT id FROM drivers WHERE is_test = TRUE )
+                 AND extract(epoch FROM date_trunc('week',current_date))::INTEGER - 1980
+                 AND driver_id not in (SELECT id FROM drivers WHERE is_test = TRUE )
                  AND 
                  	driver_id not in (
 
