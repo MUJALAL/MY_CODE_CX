@@ -1,4 +1,3 @@
-
 SELECT
 order_week::DATE AS order_week,
                  status,
@@ -70,10 +69,11 @@ order_week::DATE AS order_week,
                  AND orders.status in (4,5)
                  AND pickup_time BETWEEN
                  extract(epoch FROM date_trunc('week',current_date))::INTEGER - 19800 - 7*86400
-                 AND extract(epoch FROM date_trunc('week',current_date))::INTEGER - 1980
-                 AND driver_id not in (SELECT id FROM drivers WHERE is_test = TRUE )
+                 AND extract(epoch FROM date_trunc('week',current_date))::INTEGER - 19801
                  AND 
-                 	driver_id not in (
+                 ((driver_id is null)
+                 or
+                 	driver_id  not in (
 
 '38983',
 '268586',
@@ -1775,7 +1775,7 @@ order_week::DATE AS order_week,
 '13826',
 '273895',
 '20679',
-'21244')	
+'21244')	)
                 
              ) a
                  LEFT JOIN caller_responses cr ON a.id = cr.order_id
@@ -1789,4 +1789,3 @@ order_week::DATE AS order_week,
                  2
                  ORDER BY
                  1,2;
-
