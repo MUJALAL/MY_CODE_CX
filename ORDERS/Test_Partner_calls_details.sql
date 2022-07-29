@@ -1731,9 +1731,6 @@ THEN 'accept_vicinity'
 WHEN ivr_status ILIKE '%start%'
 THEN 'start_vicinity'
 
-WHEN ivr_status ILIKE '%start%'
-THEN 'start_vicinity'
-
 WHEN ivr_status ILIKE '%end%'
 THEN 'end_vicinity'
 
@@ -1752,10 +1749,12 @@ THEN 'default_unknown'
 WHEN ivr_status ILIKE '%none%'
 THEN 'none_vicinity'
 
+ELSE 'other_vicinity'
+
 END AS vicinity_state,
 
-count(DISTINCT call_id) as Total_Count,
+count(DISTINCT call_id) as Total_Calls,
 count(DISTINCT call_id) FILTER(WHERE ivr_name != 'none') as Total_IVR_calls,
-count(DISTINCT call_id) FILTER(WHERE ivr_name = 'none') as Total_Non_IVR 
+count(DISTINCT call_id) FILTER(WHERE ivr_name = 'none') as Total_Non_IVR_calls
 FROM raw_data as rw
 GROUP BY 1,2,3;
