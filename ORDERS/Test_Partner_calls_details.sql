@@ -1723,10 +1723,9 @@ d.id in ('38983',
 SELECT 
 geo_id,
 veh_id,
-ivr_status,
 CASE
 
-WHEN ivr_statusILIKE '%accept%'
+WHEN ivr_status ILIKE '%accept%'
 THEN 'accept_vicinity'
 
 WHEN ivr_status ILIKE '%start%'
@@ -1750,10 +1749,10 @@ THEN 'drop_vicinity'
 WHEN ivr_status ILIKE '%Default_Unknown%'
 THEN 'default_unknown'
 
-WHEN queue_name ILIKE '%none%'
+WHEN ivr_status ILIKE '%none%'
 THEN 'none_vicinity'
 
-END AS vicinity_state
+END AS vicinity_state,
 
 count(DISTINCT call_id) as Total_Count,
 count(DISTINCT call_id) FILTER(WHERE ivr_name != 'none') as Total_IVR_calls,
