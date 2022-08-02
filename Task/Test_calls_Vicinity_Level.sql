@@ -1801,8 +1801,8 @@ ON cd.order_id = od.id
 
 SELECT vicinty, count( DISTINCT caller_id) as Total_Calls
 FROM raw_data
-[[WHERE 
-    Geo_Region_id = {{GeoID}}]]
+WHERE true
+    [[AND Geo_Region_id = {{GeoID}}]]
     [[AND Vehicle_Id = {{VehID}}]]
 GROUP BY 1;
   
