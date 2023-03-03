@@ -1,0 +1,145 @@
+
+    #------------------------------------------------------
+    #----------------------Fetching Data-------------------
+    #------------------------------------------------------
+    
+The datapull would start from - 2022-11-29 
+
+Query run time in seconds : 1.890113115310669
+outbound request table fetched succesfully....
+
+Query run time in seconds : 1.7858738899230957
+outbound call disposition table fetched succesfully....
+
+Query run time in seconds : 18.37099289894104
+outbound calls table fetched succesfully....
+
+Query run time in seconds : 1.424889087677002
+outbound city viciity table fetched succesfully....
+
+Fetching Data ran succesfully....
+
+
+    #------------------------------------------------------
+    #------------------Transforming Data-------------------
+    #------------------------------------------------------
+    
+Transforming Data ran succesfully....
+
+
+    #------------------------------------------------------
+    #--------------------Merging Data----------------------
+    #------------------------------------------------------
+    
+TABLE MERGED....
+
+FLAG, ATTEMPTED & CALL_RANK Column Created ...
+
+Merging Data ran succesfully....
+
+
+    #------------------------------------------------------
+    #--------------Generating Overall Summary--------------
+    #------------------------------------------------------
+    
+Summary Data ran succesfully....
+
+
+    #------------------------------------------------------
+    #---------------Generating Tat Summary-----------------
+    #------------------------------------------------------
+    
+Tat Data ran succesfully....
+
+
+    #------------------------------------------------------
+    #---------Generating Attempts_Connected Summary--------
+    #------------------------------------------------------
+    
+Attempts_connected_tat Data ran succesfully....
+
+          date        city vicinity  total_requests  unique_requests  \
+0   2022-11-29   Ahmedabad      nor             385              339   
+1   2022-11-29  Chandigarh      nor              14               12   
+2   2022-11-29     Chennai      nor            1303             1218   
+3   2022-11-29  Coimbatore      nor              95               87   
+4   2022-11-29   Hyderabad      nor            1368             1266   
+5   2022-11-29      Indore      nor              35               29   
+6   2022-11-29      Jaipur      nor              65               60   
+7   2022-11-29     Kolkata      nor              75               74   
+8   2022-11-29     Lucknow      nor              40               40   
+9   2022-11-29    Ludhiana      nor               7                7   
+10  2022-11-29      Mumbai      nor            1936             1709   
+11  2022-11-29      Nagpur      nor              18               18   
+12  2022-11-29        Pune      nor             422              406   
+13  2022-11-29       Surat      nor              90               81   
+14  2022-11-29    Vadodara      nor               2                2   
+
+    unique_requests_dialed  unique_requests_attempted  \
+0                      331                        302   
+1                       12                         12   
+2                     1192                       1147   
+3                       86                         80   
+4                     1247                       1200   
+5                       29                         27   
+6                       57                         55   
+7                       74                         72   
+8                       38                         37   
+9                        7                          7   
+10                    1672                       1560   
+11                      18                         17   
+12                     402                        383   
+13                      79                         72   
+14                       2                          2   
+
+    unique_requests_connected  unique_mobile_numbers_requested  \
+0                         298                              252   
+1                          12                                9   
+2                        1141                              781   
+3                          80                               46   
+4                        1193                              833   
+5                          26                               25   
+6                          51                               55   
+7                          71                               55   
+8                          37                               36   
+9                           7                                5   
+10                       1547                             1246   
+11                         17                               14   
+12                        377                              308   
+13                         71                               71   
+14                          2                                2   
+
+    unique_mobile_numbers_dialed  unique_mobile_numbers_attempted  \
+0                            248                              226   
+1                              9                                9   
+2                            772                              740   
+3                             46                               43   
+4                            828                              796   
+5                             25                               23   
+6                             52                               50   
+7                             55                               53   
+8                             34                               34   
+9                              5                                5   
+10                          1235                             1160   
+11                            14                               13   
+12                           306                              290   
+13                            71                               64   
+14                             2                                2   
+
+    unique_mobile_numbers_connected  
+0                               222  
+1                                 9  
+2                               734  
+3                                43  
+4                               790  
+5                                23  
+6                                47  
+7                                52  
+8                                34  
+9                                 5  
+10                             1150  
+11                               13  
+12                              284  
+13                               63  
+14                                2  
+

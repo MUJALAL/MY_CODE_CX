@@ -1,0 +1,52 @@
+databases:
+  oms_prod_snapshot:
+    host: oms-prod-psql-snapshot.data.porter.in
+    port: 5432
+    user: murtaza_jalal
+    password: 41cU7PFrL3y9QeKsaJq5OgSdQik=
+    database: porter_order_production
+    
+  oms_prod_replica:
+    host: oms-prod-psql-replica.porter.in
+    port: 5432
+    user: murtaza_jalal
+    password: 41cU7PFrL3y9QeKsaJq5OgSdQik=
+    database: porter_order_production
+  
+  sfms:
+    host: sfms-prod-psql-replica.porter.in
+    port: 5432
+    database: sfms_production
+    user: murtaza_jalal
+    password: 8DDmhJYTMaq0xcbshZu0yWORh84=
+        
+  redshift_db:
+    host: commons-prod-redshift.porter.in
+    port: 5439
+    user: anant
+    password: Resfeber123
+    database: porter
+  vp_db:
+    host: commons-prod-psql-replica.porter.in
+    port: 5432
+    user: vp_prod_server
+    password: 0yn21DSTx&l8
+    database: commons_prod
+  inbound_db:
+    host: 192.168.0.203
+    port: 5432
+    user: postgres
+    password: postgres
+    database: reportsdb 
+  ameyo_outbound_db:
+    host: 192.168.0.38
+    port: 5432
+    user: postgres
+    password: postgres
+    database: ameyodb 
+  ameyo_inbound_db:
+    host: 192.168.0.203
+    port: 5432
+    user: postgres
+    password: postgres
+    database: ameyodb 
